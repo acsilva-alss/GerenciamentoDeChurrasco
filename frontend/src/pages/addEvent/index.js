@@ -17,8 +17,10 @@ export default function AddEvent({ history }){
             try{
                 let arrayTempUsersChecked = [];
                 let arrayTemp = [];
+                const apiResponseUserConectedData = await api.get('/users/query');
+                
                 const apiResponse = await api.get('/users/queryAll');
-                setAllUsers([...apiResponse.data.users]);
+                setAllUsers([...apiResponse.data.users.filter(element => element.id !== apiResponseUserConectedData.data.user.id)]);
                 for(let i =0; i < apiResponse.data.users.length; i++){
                     arrayTempUsersChecked.push(false);
                     arrayTemp.push(0);
