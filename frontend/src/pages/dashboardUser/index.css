@@ -1,0 +1,78 @@
+.boxDashboardUser{
+    width: 80%;
+    max-width: 500px;
+    height: 260px;
+    margin: 50px auto 0 auto;
+    border: 5px solid rgba(255,255,255,0.03);
+    border-radius: 10px;
+}
+
+.boxDashboardUser h1{
+    color: white;
+    font-size: 25px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.imgUser{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.imgUser img{
+    width: 100px;
+    height: 100px;
+}
+.dataUser{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.nameAcountUser, .emailUser{
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.formEditUser{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formEditUser label{
+    font-size: 25px;
+    color: white;
+}
+
+.formEditUser input{
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+   
+}
+
+.formEditUser input#buttonUpdateUser,
+.btnEditUsers button{
+    margin-top: 10px;
+    background: #121214;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.03);
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color:white;    
+}
+
+.formEditUser input#buttonUpdateUser:hover,
+.btnEditUsers button:hover{
+    border: 1px solid #7159C1;
+    color: #7159C1;
+    cursor: pointer;
+    text-shadow:0px 0px 5px #7159C1;
+    -moz-box-shadow:0 3px 10px 0 #7159C1; 
+    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+}

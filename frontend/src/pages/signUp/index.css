@@ -1,0 +1,57 @@
+.boxSignUp{
+    width: 80%;
+    max-width: 500px;
+    height: 200px;
+    margin: 50px auto 0 auto;
+    border: 5px solid rgba(255,255,255,0.03);
+    border-radius: 10px;
+}
+
+.formSignUp{
+    margin-top: 25px;
+    margin-left: 15%;
+
+}
+
+.formSignUp p{
+    margin-top: 5px;
+}
+
+.formSignUp label{
+    font-size: 25px;
+    color: white;
+}
+
+.formSignUp input{
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    margin-left: 5px;
+   
+}
+
+.formSignUp input#nameUser, 
+input#passwordUser{
+    margin-left: 10px;
+}
+
+.formSignUp input#buttonSignUp{
+    margin-top: 5px;
+    background: #121214;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.03);
+    width: 275px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color:white;    
+}
+
+.formSignUp input#buttonSignUp:hover{
+    border: 1px solid #7159C1;
+    color: #7159C1;
+    -moz-box-shadow:0 3px 10px 0 #7159C1; 
+    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+    text-shadow:0px 0px 5px #7159C1; 
+    cursor: pointer;
+}

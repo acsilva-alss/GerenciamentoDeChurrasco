@@ -1,0 +1,75 @@
+.boxShowEvent{
+    width: 80%;
+    max-width: 700px;
+    margin: 50px auto 0 auto;
+    border: 5px solid rgba(255,255,255,0.03);
+    border-radius: 10px;
+    font-size: 20px;
+    color:white
+}
+
+.boxShowEvent .nameEvent{
+    text-align: center;
+    background-color: #7159C1;
+    height: 30px;
+}
+.dataEvent{
+    display: flex;
+    margin: 0 5px 15px 5px;
+}
+
+.descriptionEvent h1{
+    margin-top:5px
+}
+
+.quantityUsersAndAmount{
+    margin-left: auto;
+}
+
+.quantityUsersAndAmount img{
+    margin-top:5px;
+    border-radius: 50%;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.imgQuantityPeople,
+.quantityMoney{
+    display: flex;
+    margin-right: 2px;
+}
+
+.usersGuests{
+    margin-top: 10px;
+    display: flex;
+}
+
+.usersGuests .nameItem{
+    margin-right: auto;
+    margin-left: 15px;
+   
+}
+
+.boxShowEvent .btnEdit{
+    margin: 10px 0 10px 25%;
+    background: #121214;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.03);
+    width: 270px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color:white;    
+}
+
+.boxShowEvent .btnEdit:hover{
+    border: 1px solid #7159C1;
+    color: #7159C1;
+    cursor: pointer;
+    text-shadow:0px 0px 5px #7159C1;
+    -moz-box-shadow:0 3px 10px 0 #7159C1; 
+    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+}
+

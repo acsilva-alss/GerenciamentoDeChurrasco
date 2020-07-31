@@ -1,0 +1,75 @@
+.boxHeader{
+    display: flex;
+    width: 95%;
+    max-width: 950px;   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.companyName a{
+    text-decoration:none;
+}
+
+.companyName h1{
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.phraseHeader{
+    margin: 5px auto 0 auto;
+}
+
+.phraseHeader h1{
+    color: white;
+    font-size: 25px;
+    
+    text-shadow: 5px 5px 5px #7159C1; 
+}
+
+.nameUser{
+    background: #121214;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.03);
+    float:left;
+    list-style: none;
+    height: 30px;
+}
+
+.nameUser li{
+    position:relative; 
+    float:left; 
+    border-right:1px solid #333
+}
+
+.nameUser li a{
+    color:white; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+}
+
+.nameUser li a:hover{
+    color:#7159C1; 
+    -moz-box-shadow:0 3px 10px 0 #7159C1; 
+    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+    text-shadow:0px 0px 5px #7159C1; 
+}
+
+.nameUser li  ul{
+    position:absolute; 
+    top:25px; 
+    left:0;
+    background-color:#121214; 
+    display:none;
+}   
+
+.nameUser li:hover ul, .nameUser li.over ul{
+    display:block;
+}
+
+.nameUser li ul li{
+    border:1px solid #333; 
+    display:block; 
+    width:150px;
+}
