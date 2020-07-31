@@ -5,7 +5,8 @@
     border: 5px solid rgba(255,255,255,0.03);
     border-radius: 10px;
     font-size: 20px;
-    color:white
+    color:blcak;
+    background-color: rgba(255,255,255,0.4);
 }
 .eventDataEdited{
     margin-top: 10px;
@@ -27,12 +28,11 @@
 }
 
 .boxEditEvent a:hover{
-    border: 2px solid #7159C1;
-    color: #7159C1;
+    border: 2px solid red;
     cursor: pointer;
-    text-shadow:0px 0px 5px #7159C1;
-    -moz-box-shadow:0 3px 10px 0 #7159C1; 
-    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+    text-shadow:0px 0px 5px red;
+    -moz-box-shadow:0 3px 10px 0 red; 
+    -webkit-box-shadow:0 3px 10px 0 red; 
 }
 .usersGuests{
     margin-bottom: 10px;
@@ -63,10 +63,9 @@
 }
 
 .boxEditEvent input#btnRefreshEvent:hover{
-    border: 1px solid #7159C1;
-    color: #7159C1;
+    border: 1px solid red;
     cursor: pointer;
-    text-shadow:0px 0px 5px #7159C1;
-    -moz-box-shadow:0 3px 10px 0 #7159C1; 
-    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+    text-shadow:0px 0px 5px red;
+    -moz-box-shadow:0 3px 10px 0 red; 
+    -webkit-box-shadow:0 3px 10px 0 red; 
 }

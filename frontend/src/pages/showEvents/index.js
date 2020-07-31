@@ -36,7 +36,7 @@ export default function ShowEvents({ history }){
             <Header/>
             <div className='boxShowEvents'>
 
-                <h1>Próximos eventos</h1>
+                <h1 className="titleShowEvents">Próximos eventos</h1>
                 {listEvents.map((item, index)=> (
                     <div className='event'>
                         <img src='https://image.flaticon.com/icons/svg/3079/3079122.svg' alt='imagem'/>

@@ -5,10 +5,11 @@
     margin: 50px auto 0 auto;
     border: 5px solid rgba(255,255,255,0.03);
     border-radius: 10px;
+    background-color: rgba(255,255,255,0.4);
 }
 
 .boxDashboardUser h1{
-    color: white;
+    color: black;
     font-size: 25px;
     margin-left: 5px;
     text-align: center;
@@ -44,7 +45,7 @@
 
 .formEditUser label{
     font-size: 25px;
-    color: white;
+    color: black;
 }
 
 .formEditUser input{
@@ -69,10 +70,9 @@
 
 .formEditUser input#buttonUpdateUser:hover,
 .btnEditUsers button:hover{
-    border: 1px solid #7159C1;
-    color: #7159C1;
+    border: 1px solid red;
     cursor: pointer;
-    text-shadow:0px 0px 5px #7159C1;
-    -moz-box-shadow:0 3px 10px 0 #7159C1; 
-    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+    text-shadow:0px 0px 5px red;
+    -moz-box-shadow:0 3px 10px 0 red; 
+    -webkit-box-shadow:0 3px 10px 0 red; 
 }

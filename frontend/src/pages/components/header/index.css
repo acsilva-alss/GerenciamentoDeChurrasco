@@ -24,7 +24,7 @@
     color: white;
     font-size: 25px;
     
-    text-shadow: 5px 5px 5px #7159C1; 
+    text-shadow: 5px 5px 5px black; 
 }
 
 .nameUser{
@@ -50,10 +50,9 @@
 }
 
 .nameUser li a:hover{
-    color:#7159C1; 
-    -moz-box-shadow:0 3px 10px 0 #7159C1; 
-    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
-    text-shadow:0px 0px 5px #7159C1; 
+    text-shadow:0px 0px 5px red;
+    -moz-box-shadow:0 3px 10px 0 red; 
+    -webkit-box-shadow:0 3px 10px 0 red; 
 }
 
 .nameUser li  ul{

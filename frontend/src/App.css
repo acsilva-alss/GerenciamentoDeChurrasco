@@ -4,7 +4,11 @@
 
 html, body, #root{
     min-height: 100%;
-    background-image: linear-gradient(to right,#121214, black 130%);
+    background-image: url('https://st.depositphotos.com/1433253/3025/i/450/depositphotos_30258971-stock-photo-music-party-people.jpg');
+    
+    background-repeat: repeat-x;
+    background-size: inherit; /* Resize the background image to cover the entire container */
+    background-color: black;
 }
 
 .container{

@@ -1,10 +1,11 @@
 .boxLogin{
     width: 80%;
     max-width: 500px;
-    height: 200px;
+    height: 250px;
     margin: 50px auto 0 auto;
     border: 5px solid rgba(255,255,255,0.03);
     border-radius: 10px;
+    background-color: rgba(255,255,255,0.4);
 }
 
 .formLogin{
@@ -19,7 +20,7 @@
 
 .formLogin label{
     font-size: 25px;
-    color: white;
+    color: #121214;
 }
 
 .formLogin input{
@@ -42,12 +43,11 @@
 }
 
 .formLogin input#buttonLogin:hover{
-    border: 1px solid #7159C1;
-    color: #7159C1;
+    border: 1px solid red;
     cursor: pointer;
-    text-shadow:0px 0px 5px #7159C1;
-    -moz-box-shadow:0 3px 10px 0 #7159C1; 
-    -webkit-box-shadow:0 3px 10px 0 #7159C1; 
+    text-shadow:0px 0px 5px red;
+    -moz-box-shadow:0 3px 10px 0 red; 
+    -webkit-box-shadow:0 3px 10px 0 red; 
 }
 
 
