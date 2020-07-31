@@ -15,4 +15,4 @@ app.use(authenticationRoutes);
 app.use(userRoutes);
 app.use(eventRoutes);
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);
