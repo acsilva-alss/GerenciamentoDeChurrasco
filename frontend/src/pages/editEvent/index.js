@@ -49,9 +49,11 @@ export default function EditEvent({ history }){
                 for(let i =0; i < apiResponse.data.event.users.length; i++){
                     arrayTemp.push(0);
                 }
-
                 setUsersGuestAmountPay([...arrayTemp]);
                 setUsersGuestIsPaid([...arrayTemp]);
+                setNameEventEdited(apiResponse.data.event.event_name);
+                setDescriptionEventEdited(apiResponse.data.event.event_description);
+                setDateEventEdited(apiResponse.data.event.event_date);
             }catch(err){
                 alert('Error in query event '+err);
             }
@@ -112,9 +114,9 @@ export default function EditEvent({ history }){
 
         let arrayTempGuests = [];
         let amountEdited = 0;
+
         for (let i=0; i< arrayUsersGuests.length; i++){
-            if(isEditUserGuest[i] === arrayUsersGuests[i]){
-                
+            if(isEditUserGuest.some(element => element ===arrayUsersGuests[i])){
                 arrayTempGuests.push({
                     userId: arrayUsersGuests[i].user_events.UserId,
                     amountPaid: parseInt(usersGuestAmountPay[i]),
@@ -156,11 +158,21 @@ export default function EditEvent({ history }){
 
         try{
             await api.put('/events/'+eventId+'/edit', objectToSend);
-            alert('User edit with success');
+            alert('Evento editado com sucesso');
             history.push('/showEvent/'+eventId);
         }catch(err){
             alert(' Error in edit Event '+ err);
         }    
+    }
+
+    function deleteEvent(){
+        try{
+        alert('Este evento será excluido');
+        api.delete('/events/'+eventId+'/delete');
+        history.push('/');
+        }catch(err){
+            alert('Error in delete event '+ err);
+        }
     }
 
     return(
@@ -173,7 +185,6 @@ export default function EditEvent({ history }){
                         <input
                             id='nameEventEdit'
                             type='text'
-                            placeholder= {eventObject.event_name}
                             value = {nameEventEdited}
                             required='true'
                             onChange={event => setNameEventEdited(event.target.value)}
@@ -184,7 +195,6 @@ export default function EditEvent({ history }){
                         <input
                             id='descriptionEventEdit'
                             type='text'
-                            placeholder= {eventObject.event_description}
                             value = {descriptionEventEdited}
                             required='true'
                             onChange={event => setDescriptionEventEdited(event.target.value)}
@@ -195,7 +205,6 @@ export default function EditEvent({ history }){
                         <input
                             id='dateEventEdit'
                             type='date'
-                            placeholder= {eventObject.event_date}
                             value = {dateEventEdited}
                             required='true'
                             onChange={event => setDateEventEdited(event.target.value)}
@@ -224,7 +233,8 @@ export default function EditEvent({ history }){
                         </div>
                     ))}
                     <a href='#' onClick={() => searchUsersNotGuest()}>Convide mais amigos para o evento</a>
-
+                    <a href='#' onClick={() => deleteEvent()}>Excluir evento</a>
+                    
                    
                     {usersEdit && usersNotGuest.map((item, index) =>(
                         <div className='boxUsersNotGuest'>                  
