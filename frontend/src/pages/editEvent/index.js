@@ -26,9 +26,11 @@ export default function EditEvent({ history }){
                 let arrayUsersChecked = [];
                 let arrayTemp = [];
                 const apiUsersResponse = await api.get('/users/queryAll');
-                setArrayAllUsers([...apiUsersResponse.data.users]);
 
-                for(let i =0; i < apiUsersResponse.data.users.length; i++){
+                const {users} = apiUsersResponse.data;
+                setArrayAllUsers([...users]);
+
+                for(let i =0; i < users.length; i++){
                     arrayUsersChecked.push(false);
                     arrayTemp.push(0);
                 }
@@ -44,16 +46,17 @@ export default function EditEvent({ history }){
             try{
                 const apiResponse = await api.get('/events/'+eventId+'/query');
                 setEventObject(apiResponse.data.event);
-                setArrayUsersGuests([...apiResponse.data.event.users]);
+                const { users, event_name, event_description, event_date} = apiResponse.data.event;
+                setArrayUsersGuests([...users]);
                 let arrayTemp = [];
-                for(let i =0; i < apiResponse.data.event.users.length; i++){
+                for(let i =0; i < users.length; i++){
                     arrayTemp.push(0);
                 }
                 setUsersGuestAmountPay([...arrayTemp]);
                 setUsersGuestIsPaid([...arrayTemp]);
-                setNameEventEdited(apiResponse.data.event.event_name);
-                setDescriptionEventEdited(apiResponse.data.event.event_description);
-                setDateEventEdited(apiResponse.data.event.event_date);
+                setNameEventEdited(event_name);
+                setDescriptionEventEdited(event_description);
+                setDateEventEdited(event_date);
             }catch(err){
                 alert('Error in query event '+err);
             }
@@ -206,6 +209,7 @@ export default function EditEvent({ history }){
                             id='dateEventEdit'
                             type='date'
                             value = {dateEventEdited}
+                            min={new Date().getFullYear() + '-' + String(new Date().getMonth() + 1).padStart(2, '0') + '-' + new Date().getDate()}
                             required='true'
                             onChange={event => setDateEventEdited(event.target.value)}
                         />
@@ -217,6 +221,7 @@ export default function EditEvent({ history }){
                             <input
                                 id='amountPay'
                                 type='number'
+                                min='0'
                                 disabled={!userToBeEditing(item, index)}
                                 onChange={event => handleAmountPayGuests(index, event.target.value)}
                             />
@@ -249,6 +254,7 @@ export default function EditEvent({ history }){
                             id='amountPay'
                             type='number'
                             placeholder='R$20,00'
+                            min='0'
                             onChange={event => handleAmountPay(index, event.target.value)}
                             
                             

@@ -18,10 +18,13 @@ export default function AddEvent({ history }){
                 let arrayTempUsersChecked = [];
                 let arrayTemp = [];
                 const apiResponseUserConectedData = await api.get('/users/query');
-                
                 const apiResponse = await api.get('/users/queryAll');
-                setAllUsers([...apiResponse.data.users.filter(element => element.id !== apiResponseUserConectedData.data.user.id)]);
-                for(let i =0; i < apiResponse.data.users.length; i++){
+
+                const {id} = apiResponseUserConectedData.data.user;
+                const {users} = apiResponse.data;
+               
+                setAllUsers([...users.filter(element => element.id !== id)]);
+                for(let i =0; i < users.length; i++){
                     arrayTempUsersChecked.push(false);
                     arrayTemp.push(0);
                 }
@@ -116,6 +119,7 @@ export default function AddEvent({ history }){
                             type='date'
                             required={true}
                             value = {eventDate}
+                            min={new Date().getFullYear() + '-' + String(new Date().getMonth() + 1).padStart(2, '0') + '-' + new Date().getDate()}
                             onChange={event => setEventDate(event.target.value)}
                         />
                     </div>
@@ -138,6 +142,7 @@ export default function AddEvent({ history }){
                                 id='amountPay'
                                 type='number'
                                 placeholder='R$20,00'
+                                min='0'
                                 disabled={usersIsChecked[index] === true ? false: true}
                                 onChange={event => handleAmountPay(index, event.target.value)}
                             />
