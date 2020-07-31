@@ -9,9 +9,6 @@ Este projeto consiste em um sistema que permite gerenciamento de eventos, sendo 
 - Colocar um valor sugerido por usuário de contribuição 
 - Visualizar os detalhes do churrasco, total de participantes e valor arrecadado.
 
-
-## Demonstração
-
 ## Backend
 ### Tecnologias, frameworks e bibliotecas utilizadas
 - Node
